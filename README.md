@@ -81,8 +81,25 @@ Keterangan:
 ```
 
 ## Struktur Database
-### step 1 buat database
+### step 1 membuat database
 
-db_mahasiswa
+<img width="612" height="454" alt="Screenshot 2026-01-11 162150" src="https://github.com/user-attachments/assets/1eeab799-b790-4919-b511-2b81e23c8b39" />
 
-membuat tabel users
+### step 2 menambahkan tabel users
+
+<img width="601" height="363" alt="Screenshot 2026-01-11 162008" src="https://github.com/user-attachments/assets/6eee8b75-4177-49c2-8ec9-754945496983" />
+
+### step 3 menambahkan tabel mahasiswa
+
+<img width="610" height="368" alt="Screenshot 2026-01-11 162034" src="https://github.com/user-attachments/assets/caace1ed-16e0-4ddc-9c1e-cbb46d1be1c8" />
+
+### step 4 membuat akun admin default
+
+<img width="596" height="337" alt="Screenshot 2026-01-11 162105" src="https://github.com/user-attachments/assets/c712eb35-adaa-43aa-b077-9a9b6b535de4" />
+
+## Konfigurasi Program Data Mahasiswa
+### step 1
+
+
+
+

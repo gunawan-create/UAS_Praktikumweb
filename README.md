@@ -3,6 +3,7 @@ Nama : Ali Gunawan | Kelas : TI.24.A.3 | NIM : 312410400
 
 ## TUJUAN PRAKTIKUM
 Tujuan dari praktikum ini adalah untuk:
+
 a. Menerapkan konsep Pemrograman Berorientasi Objek (OOP) dalam pengembangan aplikasi web.
 
 b.Mengimplementasikan arsitektur MVC (Model–View–Controller) menggunakan PHP Native.
@@ -52,13 +53,16 @@ project_data_mahasiswa/
 │           └── navbar.php
 ├── config/
 │   └── database.php
+|   |
 ├── routes/
 │   └── web.php
+|   |
 ├── index.php
 ├── .htaccess
 
 ```
 Keterangan:
+```
 - project_data_mahasiswa/ : folder utama project aplikasi data mahasiswa
 - app/ : menyimpan komponen utama aplikasi berbasis MVC
 - app/controllers/ : berisi controller untuk mengatur alur logika aplikasi
@@ -67,7 +71,8 @@ Keterangan:
 - app/models/ : berisi model untuk pengolahan data dan koneksi database
 - User.php : model data user dan role (admin & user)
 - Student.php : model data mahasiswa
-  
+```
+```  
 - app/views/ : berisi tampilan (UI) aplikasi
 - auth/ : halaman login, register, dan lupa password
 - admin/ : halaman khusus admin
@@ -76,12 +81,14 @@ Keterangan:
 - students/ : halaman pengelolaan data mahasiswa
 - index.php : menampilkan data mahasiswa
 - create.php : form tambah data mahasiswa
-  
+```
+```
 - edit.php : form edit data mahasiswa
 - user/ : halaman khusus user
 - navbar.php : navigasi user
 - config/ : menyimpan konfigurasi aplikasi
 - database.php : konfigurasi koneksi database
+```
 - routes/ : pengaturan routing aplikasi
 - web.php : mendefinisikan rute URL ke controller
 - index.php : router utama / entry point aplikasi

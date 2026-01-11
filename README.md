@@ -2,27 +2,13 @@
 Nama : Ali Gunawan | Kelas : TI.24.A.3 | NIM : 312410400
 
 ## TUJUAN PRAKTIKUM
-Tujuan dari praktikum ini adalah untuk:
-
-a. Menerapkan konsep Pemrograman Berorientasi Objek (OOP) dalam pengembangan aplikasi web.
-
-b.Mengimplementasikan arsitektur MVC (Model–View–Controller) menggunakan PHP Native.
-
-c.Membuat sistem routing manual dengan bantuan file .htaccess.
-
-d.Mengembangkan aplikasi web sederhana yang memiliki fitur:
-
-- Login dan register
-
-- Hak akses berdasarkan role (admin dan user)
-
-- CRUD data mahasiswa
-
-e. Melatih pemisahan logika program, tampilan, dan pengolahan data agar kode lebih terstruktur.
-
-f. Memahami alur kerja aplikasi web dari request, proses, hingga response.
-
-Praktikum ini merupakan bagian dari Project UAS Pemrograman Web, yang mengacu pada praktikum OOP dan Modular.
+Project ini dibuat untuk memenuhi **Tugas UAS Pemrograman Web**, dengan tujuan:
+- Menerapkan konsep **OOP dan Modular Programming**
+- Mengimplementasikan **Routing Application (.htaccess)**
+- Membuat **aplikasi CRUD data mahasiswa**
+- Menerapkan **sistem login dengan role Admin & User**
+- Menggunakan **framework CSS (Bootstrap)** agar tampilan responsive
+- Menyusun dokumentasi lengkap berupa **README, PDF, dan Video**
 
 ## Struktur folder project
 ```
@@ -95,3 +81,8 @@ Keterangan:
 ```
 
 ## Struktur Database
+### step 1 buat database
+
+db_mahasiswa
+
+membuat tabel users

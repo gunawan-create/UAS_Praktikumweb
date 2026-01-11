@@ -82,19 +82,46 @@ Keterangan:
 
 ## Struktur Database
 ### step 1 membuat database
+Database bernama project_data_mahasiswa dibuat sebagai tempat penyimpanan seluruh data aplikasi.
+```
+CREATE DATABASE project_data_mahasiswa;
+```
 
 <img width="612" height="454" alt="Screenshot 2026-01-11 162150" src="https://github.com/user-attachments/assets/1eeab799-b790-4919-b511-2b81e23c8b39" />
 
 ### step 2 menambahkan tabel users
+Tabel users digunakan untuk menyimpan data akun pengguna yang dapat mengakses sistem, baik sebagai admin maupun user.
+```
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('admin','user') NOT NULL
+);
+```
 
 <img width="601" height="363" alt="Screenshot 2026-01-11 162008" src="https://github.com/user-attachments/assets/6eee8b75-4177-49c2-8ec9-754945496983" />
 
 ### step 3 menambahkan tabel mahasiswa
+Tabel mahasiswa digunakan untuk menyimpan data mahasiswa yang akan dikelola oleh admin.
+```
+CREATE TABLE mahasiswa (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    npm VARCHAR(20) NOT NULL,
+    nama VARCHAR(100) NOT NULL,
+    jurusan VARCHAR(50),
+    angkatan VARCHAR(10)
+);
+```
 
 <img width="610" height="368" alt="Screenshot 2026-01-11 162034" src="https://github.com/user-attachments/assets/caace1ed-16e0-4ddc-9c1e-cbb46d1be1c8" />
 
 ### step 4 membuat akun admin default
-
+Akun admin default dibuat agar sistem dapat langsung digunakan tanpa perlu registrasi awal sebagai admin.
+```
+INSERT INTO users (username, password, role)
+VALUES ('admin', 'admin123', 'admin');
+```
 <img width="596" height="337" alt="Screenshot 2026-01-11 162105" src="https://github.com/user-attachments/assets/c712eb35-adaa-43aa-b077-9a9b6b535de4" />
 
 ## Konfigurasi Program Data Mahasiswa

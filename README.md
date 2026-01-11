@@ -88,10 +88,10 @@ Keterangan:
 - navbar.php : navigasi user
 - config/ : menyimpan konfigurasi aplikasi
 - database.php : konfigurasi koneksi database
-```
 - routes/ : pengaturan routing aplikasi
 - web.php : mendefinisikan rute URL ke controller
 - index.php : router utama / entry point aplikasi
 - .htaccess : mengatur routing URL agar lebih rapi dan mengarahkan semua request ke index.php
+```
 
 ## Struktur Database

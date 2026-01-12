@@ -195,3 +195,225 @@ Semua model menggunakan file ini untuk terhubung ke database, sehingga jika ada 
 
 ### step 7 | Folder config/database.php – Koneksi Database
 Folder views berisi seluruh tampilan antarmuka aplikasi.
+
+#### views/auth/
+<img width="476" height="142" alt="Screenshot 2026-01-12 110156" src="https://github.com/user-attachments/assets/a14e279a-3df2-4413-ba3d-ac8bb69f3e41" />
+
+Berisi halaman:
+
+- login.php → form login user
+
+- register.php → form pembuatan akun
+
+forgot_password.php → reset password
+
+Halaman ini hanya berisi tampilan (HTML + Bootstrap), tanpa logika database.
+#### views/admin/
+<img width="524" height="264" alt="Screenshot 2026-01-12 110147" src="https://github.com/user-attachments/assets/17c71683-e71c-44d3-a49d-4c745297fa20" />
+
+Berisi halaman khusus admin:
+
+- navbar.php → navigasi admin
+
+- dashboard.php → halaman utama admin setelah login
+
+- students/ → halaman pengelolaan data mahasiswa
+
+Di dalam folder students:
+
+- index.php → menampilkan tabel data mahasiswa
+
+- create.php → form tambah mahasiswa
+
+- edit.php → form edit mahasiswa
+#### views/user/
+Folder ini berisi tampilan khusus user biasa, seperti navbar user.
+<img width="256" height="72" alt="Screenshot 2026-01-12 110237" src="https://github.com/user-attachments/assets/76fe8b17-6da6-45fd-a0ae-214b184034dc" />
+
+## Tampilan Aplikasi (Hasil Implementasi)
+Hasil akhir dari implementasi program ini adalah aplikasi web dengan fitur:
+
+- Login & register user
+
+- Dashboard admin
+
+- CRUD data mahasiswa
+
+- Validasi akses berdasarkan role
+
+- Tampilan responsif menggunakan Bootstrap
+
+- Setiap halaman memiliki fungsi yang jelas dan saling terhubung sesuai alur MVC.
+
+## Uji Coba Aplikasi Data Mahasiswa
+Pengujian aplikasi dilakukan untuk memastikan seluruh fitur berjalan dengan baik sesuai dengan kebutuhan sistem. Pengujian dilakukan secara lokal menggunakan XAMPP dengan browser.
+
+### step 1 Menjalankan Aplikasi
+Langkah awal untuk menjalankan aplikasi adalah sebagai berikut:
+
+1. Pastikan Apache dan MySQL pada XAMPP sudah aktif
+
+2. Simpan project ke dalam folder:
+```
+htdocs/project_data_mahasiswa
+```
+3. Buka browser dan akses:
+```
+http://localhost/project_data_mahasiswa
+
+```
+4. Sistem akan otomatis menampilkan halaman Login
+### step 2 Uji Coba Login Admin
+
+<img width="1919" height="1067" alt="Screenshot 2026-01-11 115358" src="https://github.com/user-attachments/assets/5cd90c56-b5fb-4690-854b-119bc2cb63bb" />
+
+Langkah pengujian login admin:
+
+1. Masukkan username dan password akun admin
+
+2. Klik tombol Login
+
+3. Jika data benar, sistem akan mengarahkan ke **Dashboard Admin**
+
+<img width="1918" height="1070" alt="Screenshot 2026-01-11 115508" src="https://github.com/user-attachments/assets/c8346257-1c7e-4581-bc1a-ddb25819f1e0" />
+
+4. Di dashboard admin, tersedia menu:
+
+- Kelola Data Mahasiswa
+
+- Logout
+
+Hasil yang diharapkan:
+Admin berhasil login dan masuk ke dashboard tanpa error.
+
+### step 3 Uji Coba Register Akun Baru
+
+<img width="1919" height="1068" alt="Screenshot 2026-01-11 115414" src="https://github.com/user-attachments/assets/30a70928-fcdc-43d9-937a-390703576786" />
+
+Pengujian fitur pembuatan akun:
+
+1. Pada halaman login, klik Buat Akun
+
+2. Isi form:
+
+- Username
+
+- Password
+
+3. Klik tombol Daftar
+
+4. Sistem menampilkan pesan akun berhasil dibuat
+
+5. User diarahkan kembali ke halaman login
+
+Hasil yang diharapkan:
+Akun baru berhasil tersimpan di database dan dapat digunakan untuk login.
+
+### step 4 Uji Coba Lupa Password
+
+<img width="1919" height="1070" alt="Screenshot 2026-01-11 115428" src="https://github.com/user-attachments/assets/c4505527-623f-4a83-a377-1457d012c23a" />
+
+Pengujian reset password:
+
+1. Pada halaman login, klik Lupa Password
+
+2. Masukkan:
+
+- Username
+
+- Password baru
+
+3. Klik tombol Reset
+
+4. Sistem menampilkan pesan berhasil
+
+5. Login kembali menggunakan password baru
+
+Hasil yang diharapkan:
+Password berhasil diubah dan user dapat login kembali.
+
+### step 5 Uji Coba Tambah Data Mahasiswa
+
+<img width="1919" height="1072" alt="Screenshot 2026-01-11 115520" src="https://github.com/user-attachments/assets/88f2efc0-db06-4bb4-a453-69a1e74f7aa6" />
+
+
+<img width="1919" height="1067" alt="Screenshot 2026-01-11 115531" src="https://github.com/user-attachments/assets/6cc772fd-f4e9-4fbe-8832-694502a27c91" />
+
+
+Langkah pengujian fitur tambah data:
+
+1. Login sebagai admin
+
+2. Masuk ke menu Kelola Data Mahasiswa
+
+3. Klik tombol Tambah Mahasiswa
+
+4. Isi data:
+
+- NPM
+
+- Nama
+
+- Jurusan
+
+- Angkatan
+
+5. Klik tombol Simpan
+
+Hasil yang diharapkan:
+Data mahasiswa tersimpan dan langsung tampil pada tabel data mahasiswa.
+
+### step 6 Uji Coba Edit Data Mahasiswa
+
+<img width="1919" height="1065" alt="Screenshot 2026-01-11 141434" src="https://github.com/user-attachments/assets/5f06154e-11b9-4a4b-9a37-9d0fda3500de" />
+
+<img width="1919" height="1068" alt="Screenshot 2026-01-11 141447" src="https://github.com/user-attachments/assets/8c186dd1-e165-4420-ab21-d5020f8cf284" />
+
+Pengujian fitur edit data:
+
+1. Pada tabel data mahasiswa, klik tombol Edit
+
+2. Ubah salah satu data mahasiswa
+
+3. Klik tombol Update
+
+Hasil yang diharapkan:
+Data mahasiswa berhasil diperbarui dan tampil sesuai perubahan.
+
+### step 7 Uji Coba Hapus Data Mahasiswa
+
+<img width="1919" height="1066" alt="Screenshot 2026-01-11 141503" src="https://github.com/user-attachments/assets/52bd86fe-563f-4c17-a41e-d17e8561c7ad" />
+
+Pengujian fitur hapus data:
+
+1. Klik tombol Hapus pada salah satu data mahasiswa
+
+2. Konfirmasi penghapusan data
+
+Hasil yang diharapkan:
+Data mahasiswa terhapus dari database dan tidak tampil lagi di tabel.
+
+### step 8 Uji Coba Logout
+
+<img width="1918" height="1070" alt="Screenshot 2026-01-11 115508" src="https://github.com/user-attachments/assets/4dffaa21-0fe1-4ed5-93e7-cc3736f7422c" />
+
+Langkah pengujian logout:
+
+1. Klik tombol Logout
+
+2. Sistem menghapus session user
+
+3. User diarahkan kembali ke halaman login
+
+Hasil yang diharapkan:
+User berhasil logout dan tidak dapat mengakses halaman admin tanpa login.
+
+## Penjelasan URL Demo Aplikasi
+Pada project Data Mahasiswa ini, aplikasi belum menggunakan hosting online, melainkan dijalankan secara local server menggunakan XAMPP. Aplikasi dijalankan melalui browser dengan URL: 
+```
+http://localhost/project_data_mahasiswa
+```
+URL tersebut berfungsi sebagai alamat demo aplikasi, di mana dosen atau penguji dapat melihat langsung bagaimana aplikasi berjalan di lingkungan lokal. Pada aplikasi Data Mahasiswa project ini tidak menggunakan hosting online karena pengembangan dan pengujian dilakukan secara lokal menggunakan XAMPP. Hal ini dipilih karena fokus utama tugas UAS adalah pada penerapan konsep pemrograman web, seperti struktur MVC, routing, dan fitur CRUD, bukan pada proses deployment aplikasi. Selain itu, penggunaan localhost memudahkan proses pengujian tanpa memerlukan biaya tambahan atau konfigurasi server eksternal, sehingga sudah mencukupi untuk kebutuhan demonstrasi dan penilaian.
+
+## Kesimpulan
+Pengujian aplikasi menunjukkan bahwa seluruh fitur berjalan dengan baik, mulai dari proses login, pengelolaan data mahasiswa, hingga logout. Aplikasi juga mampu menjaga alur akses agar halaman admin tidak dapat diakses tanpa autentikasi. Dengan demikian, aplikasi Data Mahasiswa ini telah berhasil dibangun sesuai dengan kebutuhan tugas, serta dapat menjadi dasar yang baik untuk pengembangan aplikasi web yang lebih kompleks di masa depan.

@@ -197,6 +197,7 @@ Semua model menggunakan file ini untuk terhubung ke database, sehingga jika ada 
 Folder views berisi seluruh tampilan antarmuka aplikasi.
 
 #### views/auth/
+
 <img width="476" height="142" alt="Screenshot 2026-01-12 110156" src="https://github.com/user-attachments/assets/a14e279a-3df2-4413-ba3d-ac8bb69f3e41" />
 
 Berisi halaman:
@@ -209,6 +210,7 @@ forgot_password.php → reset password
 
 Halaman ini hanya berisi tampilan (HTML + Bootstrap), tanpa logika database.
 #### views/admin/
+
 <img width="524" height="264" alt="Screenshot 2026-01-12 110147" src="https://github.com/user-attachments/assets/17c71683-e71c-44d3-a49d-4c745297fa20" />
 
 Berisi halaman khusus admin:
@@ -228,6 +230,7 @@ Di dalam folder students:
 - edit.php → form edit mahasiswa
 #### views/user/
 Folder ini berisi tampilan khusus user biasa, seperti navbar user.
+
 <img width="256" height="72" alt="Screenshot 2026-01-12 110237" src="https://github.com/user-attachments/assets/76fe8b17-6da6-45fd-a0ae-214b184034dc" />
 
 ## Tampilan Aplikasi (Hasil Implementasi)

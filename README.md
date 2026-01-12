@@ -416,7 +416,7 @@ Pada project Data Mahasiswa ini, aplikasi belum menggunakan hosting online, mela
 ```
 http://localhost/project_data_mahasiswa
 ```
-Pada aplikasi Data Mahasiswa project ini tidak menggunakan hosting online karena pengembangan dan pengujian dilakukan secara lokal menggunakan XAMPP. Hal ini dipilih karena fokus utama tugas UAS adalah pada penerapan konsep pemrograman web, seperti struktur MVC, routing, dan fitur CRUD, bukan pada proses deployment aplikasi. Selain itu, penggunaan localhost memudahkan proses pengujian tanpa memerlukan biaya tambahan atau konfigurasi server eksternal, sehingga sudah mencukupi untuk kebutuhan demonstrasi dan penilaian.
+Aplikasi Data Mahasiswa pada project ini tidak menggunakan hosting online karena pengembangan dan pengujian dilakukan secara lokal menggunakan XAMPP. Hal ini dipilih karena fokus utama pada project saya buat adalah penerapan konsep pemrograman web, seperti struktur MVC, routing, dan fitur CRUD, bukan pada proses deployment aplikasi. Selain itu, penggunaan localhost memudahkan proses pengujian tanpa memerlukan biaya tambahan atau konfigurasi server eksternal, sehingga sudah mencukupi untuk kebutuhan demonstrasi dan penilaian.
 
 ## Kesimpulan
 Pengujian aplikasi menunjukkan bahwa seluruh fitur berjalan dengan baik, mulai dari proses login, pengelolaan data mahasiswa, hingga logout. Aplikasi juga mampu menjaga alur akses agar halaman admin tidak dapat diakses tanpa autentikasi. Dengan demikian, aplikasi Data Mahasiswa ini telah berhasil dibangun sesuai dengan kebutuhan tugas, serta dapat menjadi dasar yang baik untuk pengembangan aplikasi web yang lebih kompleks di masa depan.

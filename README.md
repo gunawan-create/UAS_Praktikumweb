@@ -125,8 +125,73 @@ VALUES ('admin', 'admin123', 'admin');
 <img width="596" height="337" alt="Screenshot 2026-01-11 162105" src="https://github.com/user-attachments/assets/c712eb35-adaa-43aa-b077-9a9b6b535de4" />
 
 ## Konfigurasi Program Data Mahasiswa
-### step 1
+### step 1 | .htaccess – Routing URL
+File .htaccess digunakan untuk mengatur agar semua request URL diarahkan ke satu file utama, yaitu index.php. Dengan konfigurasi ini, aplikasi tidak perlu memanggil file PHP secara langsung di URL, sehingga URL menjadi lebih rapi dan mudah dibaca.
 
+<img width="838" height="568" alt="code htaccess" src="https://github.com/user-attachments/assets/23c95860-805e-4b84-9acd-850bf42c5429" />
 
+setiap halaman (login, dashboard, mahasiswa, dll) tetap diproses oleh satu pintu utama aplikasi.
 
+### step 2 | index.php (Root) – Entry Point Aplikasi
+File index.php di root project merupakan entry point utama atau titik awal aplikasi. Semua request dari browser pertama kali diproses di file ini.
 
+<img width="1126" height="2192" alt="code index root" src="https://github.com/user-attachments/assets/93fec530-00d2-4b2c-a02c-24c0816606e1" />
+
+Dengan adanya file ini, aplikasi memiliki alur terpusat, sehingga lebih aman dan terkontrol.
+
+### step 3 | routes/web.php – Pengatur Alur Halaman
+File web.php bertugas sebagai router aplikasi. File ini membaca parameter URL (contoh: admin/students) lalu menentukan controller dan method mana yang harus dijalankan.
+
+<img width="1156" height="1508" alt="code web" src="https://github.com/user-attachments/assets/1b88267e-c801-4a4b-968c-c00f104c19be" />
+
+Fungsi routing ini:
+
+- Memisahkan URL dengan logic program
+
+- Memudahkan pengembangan halaman baru
+
+- Menghindari pemanggilan file view secara langsung
+
+### step 4 | Folder app/controllers/ – Pengatur Logika Aplikasi
+Folder controllers berisi file yang mengatur alur logika aplikasi.
+
+#### AuthController.php
+
+<img width="1542" height="2002" alt="code auth" src="https://github.com/user-attachments/assets/34e05294-8d3d-43f9-a08f-96324674f7c8" />
+
+Controller ini menangani seluruh proses autentikasi pengguna, yaitu: Login,Register akun,Lupa password dan Logout. selain itu Controller juga bertugas, Mengecek kecocokan data login, Menyimpan data user ke dalam session, Mengarahkan user sesuai role (admin atau user)
+
+#### StudentController.php
+
+<img width="1140" height="2078" alt="code student" src="https://github.com/user-attachments/assets/72e3cb33-cdd8-4ef0-af4d-6054d19cf854" />
+
+Controller ini menangani CRUD data mahasiswa, yaitu: Menampilkan data mahasiswa, Menambah data mahasiswa,Mengedit data mahasiswa,Menghapus data mahasiswa.
+
+Controller ini berperan sebagai penghubung antara model Student dan view mahasiswa.
+
+### step 5 | Folder app/models/ – Pengolahan Data Database
+Folder models berisi file yang berhubungan langsung dengan database.
+
+#### User.php
+
+<img width="1726" height="1394" alt="code user" src="https://github.com/user-attachments/assets/0bae97f5-1424-4218-846b-02f74ef3985c" />
+
+Model ini digunakan untuk Mengelola data user Mengecek login user, Menyimpan data akun baru dan Reset password. model ini berinteraksi dengan tabel users, yang menyimpan ,username, password dan role (admin atau user)
+
+#### Student.php
+
+<img width="1864" height="1850" alt="code students" src="https://github.com/user-attachments/assets/fef53dab-e51f-486e-a409-6de592a11b76" />
+
+Model ini bertugas mengelola data mahasiswa pada tabel mahasiswa, seperti Mengambil data mahasiswa,Menyimpan data baru,Memperbarui data,dan Menghapus data.
+
+Dengan pemisahan ini, query database tidak ditulis di controller atau view, sehingga kode lebih rapi dan aman.
+
+### step 6 | Folder config/database.php – Koneksi Database
+File ini berisi konfigurasi koneksi ke database MySQL, seperti Host,Username,Password,dan Nama database.
+
+<img width="1326" height="558" alt="code database" src="https://github.com/user-attachments/assets/90065162-b888-45b8-ab89-e7cea570cf75" />
+
+Semua model menggunakan file ini untuk terhubung ke database, sehingga jika ada perubahan konfigurasi, cukup diubah di satu tempat.
+
+### step 7 | Folder config/database.php – Koneksi Database
+Folder views berisi seluruh tampilan antarmuka aplikasi.
